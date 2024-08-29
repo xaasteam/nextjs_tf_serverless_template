@@ -1,0 +1,56 @@
+# general ignore
+*.ignore*
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# node modules
+node_modules
+
+# env
+.env
+
+# serverless
+serverless
+.handlers
+
+# test
+coverage
+test-report.xml
+
+# ds_store
+.DS_Store
+
+# build
+./build
+.aws-build
+
+# env files
+.env.client
+.env-dev.client
+.env-st.client
+.env-rt.client
+.env-prod.client
+
+# eslint
+.eslintcache
+
+# IDE
+.vscode
+
+# actdev
+actdev
+actdev.sh
+setupdocker.sh
+
+# next.js
+/.next/
+/out/
+.env.local
+
+*.zip
+node_modules

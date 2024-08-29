@@ -1,0 +1,18 @@
+service: nextjs-app
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+
+plugins:
+  - serverless-next.js
+  - serverless-offline
+
+functions:
+  api:
+    handler: src/pages/api/hello.handler
+    events:
+      - http:
+          path: api/hello
+          method: get
