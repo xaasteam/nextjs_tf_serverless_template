@@ -11,7 +11,7 @@ plugins:
 
 functions:
   api:
-    handler: src/pages/api/hello.handler
+    handler: src/serverless/hello.handler
     events:
       - http:
           path: api/hello

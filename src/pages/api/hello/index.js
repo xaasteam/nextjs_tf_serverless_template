@@ -1,18 +1,17 @@
 // src/pages/api/hello.js
-// const { APIGatewayProxyHandler } = require('aws-lambda');
 
-const handler = async (event) => {
-  if (event.httpMethod === 'GET') {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Hello!' }),
-    };
+const handler = async (req, res) => {
+  if (req.method === 'GET') {
+    res.status(200).json({ message: 'Hello!' });
   } else {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ message: 'Method Not Allowed' }),
-    };
+    res.status(405).json({ message: 'Method Not Allowed' });
   }
 };
 
-module.exports.handler = handler;
+// Export for Next.js
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = handler;
+}
+
+// Export for Serverless
+export default handler;

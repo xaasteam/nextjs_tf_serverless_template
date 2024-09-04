@@ -1,3 +1,6 @@
+# secrets
+.env
+
 # general ignore
 *.ignore*
 
@@ -7,6 +10,7 @@
 *.tfstate.*
 crash.log
 crash.*.log
+*.lock.hcl
 
 # node modules
 node_modules
